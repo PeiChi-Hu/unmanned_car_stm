@@ -1,0 +1,29 @@
+16:12:55 **** Incremental Build of configuration Debug for project chatter ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/mainpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/mainpp.d" -MT"Core/Src/mainpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mainpp.o"
+In file included from ../Core/Inc/ros.h:39,
+                 from ../Core/Src/mainpp.cpp:9:
+../Core/Inc/STM32Hardware.h: In member function 'void STM32Hardware::write(uint8_t*, int)':
+../Core/Inc/STM32Hardware.h:113:22: warning: comparison of integer expressions of different signedness: 'int' and 'long unsigned int' [-Wsign-compare]
+  113 |       int n_tail = n <= tbuflen - twind ? n : tbuflen - twind;
+      |                    ~~^~~~~~~~~~~~~~~~~~
+arm-none-eabi-g++ -o "chatter.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/leochen/STM32CubeIDE/workspace_1.9.0/chatter/STM32F446RETX_FLASH.ld" -Wl,-Map="chatter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: chatter.elf
+ 
+arm-none-eabi-size   chatter.elf 
+arm-none-eabi-objdump -h -S  chatter.elf  > "chatter.list"
+arm-none-eabi-objcopy  -O ihex  chatter.elf  "chatter.hex"
+arm-none-eabi-objcopy  -O binary  chatter.elf  "chatter.bin"
+   text	   data	    bss	    dec	    hex	filename
+  23332	    152	   5268	  28752	   7050	chatter.elf
+Finished building: default.size.stdout
+ 
+Finished building: chatter.bin
+Finished building: chatter.hex
+ 
+ 
+Finished building: chatter.list
+ 
+
+16:12:55 Build Finished. 0 errors, 1 warnings. (took 778ms)
+

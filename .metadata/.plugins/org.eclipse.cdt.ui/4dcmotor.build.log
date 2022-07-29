@@ -1,0 +1,10 @@
+20:10:09 **** Incremental Build of configuration Debug for project 4dcmotor ****
+make -j8 all 
+arm-none-eabi-size   4dcmotor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12676	     20	   1916	  14612	   3914	4dcmotor.elf
+Finished building: default.size.stdout
+ 
+
+20:10:09 Build Finished. 0 errors, 0 warnings. (took 169ms)
+

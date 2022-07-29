@@ -1,0 +1,10 @@
+20:10:14 **** Incremental Build of configuration Debug for project ros0723 ****
+make -j8 all 
+arm-none-eabi-size   ros0723.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17892	     20	   2380	  20292	   4f44	ros0723.elf
+Finished building: default.size.stdout
+ 
+
+20:10:14 Build Finished. 0 errors, 0 warnings. (took 168ms)
+

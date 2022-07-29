@@ -1,0 +1,11 @@
+21:37:39 **** Incremental Build of configuration Debug for project encoder ****
+make -j8 all 
+arm-none-eabi-gcc -o "encoder.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/leochen/STM32CubeIDE/workspace_1.9.0/encoder/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="encoder.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_1.9.0_4/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `HAL_TIM_IC_CaptureCallback':
+/home/leochen/STM32CubeIDE/workspace_1.9.0/encoder/Debug/../Core/Src/main.c:69: undefined reference to `__HALTIM_GET_COUNTER'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:64: encoder.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+21:37:39 Build Failed. 3 errors, 0 warnings. (took 281ms)
+

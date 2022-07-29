@@ -1,0 +1,10 @@
+20:10:11 **** Incremental Build of configuration Debug for project Encoder_DCmotor ****
+make -j8 all 
+arm-none-eabi-size   Encoder_DCmotor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17148	     20	   2316	  19484	   4c1c	Encoder_DCmotor.elf
+Finished building: default.size.stdout
+ 
+
+20:10:12 Build Finished. 0 errors, 0 warnings. (took 171ms)
+
